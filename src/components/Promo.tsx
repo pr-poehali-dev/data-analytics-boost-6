@@ -1,5 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function Promo() {
   const container = useRef<HTMLDivElement>(null);
@@ -36,12 +37,11 @@ export default function Promo() {
         </p>
         <div className="flex flex-wrap gap-3">
           {["Сургут XVII века", "Советский период", "Архитектурное наследие", "Торговые пути"].map((route) => (
-            <button
-              key={route}
-              className="px-4 py-2 border border-white/50 text-white text-sm hover:bg-white hover:text-black transition-colors cursor-pointer backdrop-blur-sm"
-            >
-              {route}
-            </button>
+            <Link key={route} to="/routes">
+              <button className="px-4 py-2 border border-white/50 text-white text-sm hover:bg-white hover:text-black transition-colors cursor-pointer backdrop-blur-sm">
+                {route}
+              </button>
+            </Link>
           ))}
         </div>
       </div>

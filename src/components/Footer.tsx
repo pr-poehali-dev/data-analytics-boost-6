@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <div
@@ -10,17 +12,17 @@ export default function Footer() {
             <div className="flex shrink-0 gap-8 sm:gap-12 lg:gap-20">
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Исследовать</h3>
-                <a href="#places" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Исторические места</a>
-                <a href="#routes" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Маршруты</a>
-                <a href="#timeline" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Хронология</a>
-                <a href="#media" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Медиатека</a>
+                <Link to="/places" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Исторические места</Link>
+                <Link to="/routes" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Маршруты</Link>
+                <Link to="/timeline" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Хронология</Link>
+                <Link to="/media" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Медиатека</Link>
               </div>
               <div className="flex flex-col gap-1 sm:gap-2">
                 <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Сообщество</h3>
-                <a href="#news" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Новости и события</a>
-                <a href="#researchers" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Для исследователей</a>
-                <a href="#about" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">О проекте</a>
-                <a href="#contact" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Контакты</a>
+                <Link to="/news" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Новости и события</Link>
+                <Link to="/researchers" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Для исследователей</Link>
+                <Link to="/about" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">О проекте</Link>
+                <Link to="/about#contact" className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base">Контакты</Link>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 sm:gap-0">

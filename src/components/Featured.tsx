@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
 const sections = [
@@ -5,25 +6,25 @@ const sections = [
     icon: "MapPin",
     title: "Исторические места",
     desc: "Каталог объектов с фильтрами по эпохе, типу и району. Фотогалереи, координаты и исторические справки.",
-    href: "#places",
+    href: "/places",
   },
   {
     icon: "Navigation",
     title: "Тематические маршруты",
     desc: "«Сургут XVII века», «Советский период», «Архитектурное наследие» — с картой, аудиогидом и рекомендациями.",
-    href: "#routes",
+    href: "/routes",
   },
   {
     icon: "Clock",
     title: "Хронология",
     desc: "Интерактивная лента времени с ключевыми событиями истории Сургута, привязанными к местам на карте.",
-    href: "#timeline",
+    href: "/timeline",
   },
   {
     icon: "Image",
     title: "Медиатека",
     desc: "Архивные фотографии, документы, видеоинтервью с историками и аудиозаписи краеведов.",
-    href: "#media",
+    href: "/media",
   },
 ];
 
@@ -40,9 +41,9 @@ export default function Featured() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {sections.map((s) => (
-            <a
+            <Link
               key={s.title}
-              href={s.href}
+              to={s.href}
               className="group border border-neutral-200 p-8 hover:border-neutral-900 transition-colors duration-300 cursor-pointer block"
             >
               <div className="flex items-start gap-4">
@@ -54,7 +55,7 @@ export default function Featured() {
                   <p className="text-neutral-500 text-sm leading-relaxed">{s.desc}</p>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -64,9 +65,11 @@ export default function Featured() {
               Актуальное событие — <span className="text-neutral-900 font-medium">Выставка «Сургут в годы войны»</span>, городской музей, март 2026
             </p>
           </div>
-          <button className="bg-black text-white border border-black px-6 py-3 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-wide">
-            Все события →
-          </button>
+          <Link to="/news">
+            <button className="bg-black text-white border border-black px-6 py-3 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-wide">
+              Все события →
+            </button>
+          </Link>
         </div>
       </div>
     </div>

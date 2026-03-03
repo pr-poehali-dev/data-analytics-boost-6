@@ -1,5 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   const container = useRef<HTMLDivElement>(null);
@@ -45,10 +46,10 @@ export default function Hero() {
           </button>
         </div>
         <div className="flex flex-wrap justify-center gap-6 mt-10 text-sm opacity-80">
-          <a href="#places" className="hover:opacity-100 transition-opacity cursor-pointer">→ Исторические места</a>
-          <a href="#routes" className="hover:opacity-100 transition-opacity cursor-pointer">→ Маршруты</a>
-          <a href="#timeline" className="hover:opacity-100 transition-opacity cursor-pointer">→ Хронология</a>
-          <a href="#media" className="hover:opacity-100 transition-opacity cursor-pointer">→ Медиатека</a>
+          <Link to="/places" className="hover:opacity-100 transition-opacity cursor-pointer">→ Исторические места</Link>
+          <Link to="/routes" className="hover:opacity-100 transition-opacity cursor-pointer">→ Маршруты</Link>
+          <Link to="/timeline" className="hover:opacity-100 transition-opacity cursor-pointer">→ Хронология</Link>
+          <Link to="/media" className="hover:opacity-100 transition-opacity cursor-pointer">→ Медиатека</Link>
         </div>
       </div>
     </div>
